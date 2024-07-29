@@ -11,10 +11,9 @@ const Login = () => {
     e.preventDefault();
     try {
       const result = await login(email, password);
-      localStorage.setItem('token', result.token); // Store the token
-      navigate('/account'); // Redirect to account page on successful login
+      localStorage.setItem('token', result.token);
+      navigate('/account');
     } catch (error) {
-      console.error('Login failed:', error);
       alert('Login failed. Please check your credentials and try again.');
     }
   };
@@ -23,7 +22,7 @@ const Login = () => {
     <div>
       <h1>Login</h1>
       <form onSubmit={handleSubmit}>
-        <div>
+        <div className="form-group">
           <label>Email</label>
           <input
             type="email"
@@ -32,7 +31,7 @@ const Login = () => {
             required
           />
         </div>
-        <div>
+        <div className="form-group">
           <label>Password</label>
           <input
             type="password"

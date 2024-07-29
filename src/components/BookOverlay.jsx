@@ -1,5 +1,5 @@
 import React from 'react';
-import './BookOverlay.css'; // Add CSS for styling the overlay
+import './BookOverlay.css'; 
 
 const BookOverlay = ({ book, onClose }) => {
   if (!book) return null;

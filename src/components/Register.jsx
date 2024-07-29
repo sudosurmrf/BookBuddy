@@ -13,8 +13,8 @@ const Register = () => {
     e.preventDefault();
     try {
       const result = await register(firstname, lastname, email, password);
-      localStorage.setItem('token', result.token); // Store the token
-      navigate('/login'); // Redirect to login page on successful registration
+      localStorage.setItem('token', result.token); 
+      navigate('/login'); 
     } catch (error) {
       console.error('Registration failed:', error);
       alert('Registration failed. Please try again.');

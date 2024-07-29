@@ -10,7 +10,7 @@ const Account = () => {
     const fetchUserDetails = async () => {
       const token = localStorage.getItem('token');
       if (!token) {
-        navigate('/login'); // Redirect to login if no token is found
+        navigate('/login'); 
         return;
       }
 
@@ -19,7 +19,7 @@ const Account = () => {
         setUser(userDetails);
       } catch (error) {
         console.error('Failed to fetch user details:', error);
-        navigate('/login'); // Redirect to login if fetching user details fails
+        navigate('/login'); 
       }
     };
     fetchUserDetails();
